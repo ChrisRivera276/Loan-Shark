@@ -34,20 +34,20 @@ function buildSchedule(amount, rate, term, payment) {
     let balance = amount;
     let totalInterest = 0;
     let monthlyInterest = 0;
-    let monthlyPrinciple = 0;
+    let monthlyPrincipal = 0;
 
 
     for (let month = 1; month <= term; month++) {
 
         monthlyInterest = calcInterest(balance, rate);
         totalInterest += monthlyInterest;
-        monthlyPrinciple = payment - monthlyInterest;
-        balance = balance - monthlyPrinciple;
+        monthlyPrincipal = payment - monthlyInterest;
+        balance = balance - monthlyPrincipal;
 
         let curPayment = {
             month: month,
             payment: payment,
-            principal: monthlyPrinciple,
+            principal: monthlyPrincipal,
             interest: monthlyInterest,
             totalInterest: totalInterest,
             balance: balance,
@@ -56,7 +56,7 @@ function buildSchedule(amount, rate, term, payment) {
         payments.push(curPayment);
 
         // return an array of payment objects
-        
+
     }
     return payments;
 }
@@ -102,7 +102,7 @@ function displayData(payments, lAmount, payment, ) {
         currency: "USD"
     });
 
-    let totalInterest = payments[payments.length-1].totalInterest;
+    let totalInterest = payments[payments.length - 1].totalInterest;
     document.getElementById("totalInterest").innerHTML = Number(totalInterest).toLocaleString("en-us", {
         style: "currency",
         currency: "USD"
@@ -127,6 +127,7 @@ function calcRate(rate) {
     return rate = rate / 1200;
 
 }
+
 function calcInterest(balance, rate) {
     return balance * rate;
 }

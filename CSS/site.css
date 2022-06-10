@@ -50,37 +50,38 @@ main>.container {
     font-weight: bold;
 }
 
-.techIcons{
+.techIcons {
     font-size: 3.5rem;
 
 }
 
-.techIcons2{
+.techIcons2 {
     font-size: 4rem;
-    
+
 }
 
 
-.messagestyle{
+.messagestyle {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.pageBackground{
-    background-color:var(--cr-light-color-color)
+.pageBackground {
+    background-color: var(--cr-light-color-color)
 }
 
-.loanForm-1{
-    background-color: rgba(151, 151, 151, 0.953);
+.loanForm-1 {
+    background-color: rgba(206, 206, 206, 0.953);
     border-radius: 10px;
 }
 
-.loanForm-2{
-    background-color: rgba(166, 180, 255, 0.953);
+.loanForm-2 {
+    background-color: rgba(206, 206, 206, 0.953);
     border-radius: 10px;
+    margin-right: .5rem
 }
 
-.loanForm-3{
-    background-color: rgba(147, 147, 147, 0.953);
+.loanForm-3 {
+    background-color: rgba(206, 206, 206, 0.953);
     border-radius: 10px;
 }
