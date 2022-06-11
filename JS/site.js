@@ -36,7 +36,6 @@ function buildSchedule(amount, rate, term, payment) {
     let monthlyInterest = 0;
     let monthlyPrincipal = 0;
 
-
     for (let month = 1; month <= term; month++) {
 
         monthlyInterest = calcInterest(balance, rate);
@@ -54,9 +53,6 @@ function buildSchedule(amount, rate, term, payment) {
         }
 
         payments.push(curPayment);
-
-        // return an array of payment objects
-
     }
     return payments;
 }
@@ -86,11 +82,6 @@ function displayData(payments, lAmount, payment, ) {
 
         // write the payment at the top of the page
         tableBody.appendChild(paymentRow);
-
-
-
-
-
     }
 
     document.getElementById("payment").innerHTML = Number(payment).toLocaleString("en-us", {
